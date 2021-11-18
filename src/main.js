@@ -1,7 +1,6 @@
 'use strict';
 import Popup from './popup.js';
 import Field from './field.js';
-
 const CARROT__COUNT = 6;
 const BUG__COUNT = 6;
 const GAME_DURATION_SEC = 10;
@@ -10,7 +9,6 @@ const gameBtn = document.querySelector('.game__button');
 const gamescore = document.querySelector('.game__score');
 const gametimer = document.querySelector('.game__timer');
 
-const carrotSound = new Audio('./sound/carrot_pull.mp3');
 const alertSound = new Audio('./sound/alert.wav');
 const bgSound = new Audio('./sound/bg.mp3');
 const bugSound = new Audio('./sound/bug_pull.mp3');
@@ -32,10 +30,10 @@ function onItemClick(item) {
   }
   if (item === 'carrot') {
     score++;
+    updateScoreBoard();
     if (score === CARROT__COUNT) {
       finishGame(true);
     }
-    updateScoreBoard();
   } else if (item === 'bug') {
     finishGame(false);
   }
