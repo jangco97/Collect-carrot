@@ -1,4 +1,5 @@
 'use strict';
+
 import Popup from './popup';
 const CARROT__SIZE = 80;
 const CARROT__COUNT = 5;
