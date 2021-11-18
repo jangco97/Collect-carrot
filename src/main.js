@@ -67,11 +67,8 @@ function showStopButton() {
   const icon = gameBtn.querySelector('.fas');
   icon.classList.add('fa-stop');
   icon.classList.remove('fa-play');
-
   gameBtn.style.visibility = 'visible';
 }
-console.log();
-aaa;
 function hideGameButton() {
   gameBtn.style.visibility = 'hidden';
 }
@@ -114,8 +111,8 @@ function initGame() {
 function addItem(className, count, imgPath) {
   const x1 = 0;
   const y1 = 0;
-  const x2 = fieldRect.width - 80;
-  const y2 = fieldRect.height - 80;
+  const x2 = fieldRect.width - CARROT__SIZE;
+  const y2 = fieldRect.height - CARROT__SIZE;
 
   for (let i = 0; i < count; i++) {
     const item = document.createElement('img');
