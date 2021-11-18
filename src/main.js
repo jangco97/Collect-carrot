@@ -1,6 +1,5 @@
 'use strict';
-
-import Popup from './popup';
+import Popup from './popup.js';
 const CARROT__SIZE = 80;
 const CARROT__COUNT = 5;
 const BUG__COUNT = 5;
@@ -22,7 +21,7 @@ let score = 0;
 let timer = undefined;
 
 const gameFinishBanner = new Popup();
-gameFinishBanner.addEventListener(() => {
+gameFinishBanner.setClickListener(() => {
   startGame();
 });
 field.addEventListener('click', onFieldClick);
